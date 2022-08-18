@@ -26,7 +26,7 @@ export default function App() {
 
   useEffect(() => {
     query === ("") && listiconfilter.length === 0
-      ? setResults(vicons.slice(0, 25))
+      ? setResults(vicons.slice(0, 100))
       :
       listiconfilter.length !== 0 ?
         setResults(vicons.filter((icon: any) => {
