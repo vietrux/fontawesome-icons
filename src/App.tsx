@@ -1,14 +1,21 @@
+import axios from 'axios';
 import { useEffect, useState, useTransition } from 'react';
 import category from './category.json';
 import IconModel from './IconModel';
-import viconslist from './vicons.json';
 
-//conver object to array viconslist
-const vicons = Object.keys(viconslist).map(key => viconslist[key as keyof typeof viconslist]);
+var vicons: any[] = []
+async function fetchData() {
+  const result = await axios.get('/vicons.json');
+  vicons = result.data;
+}
+fetchData()
+
+
 const vcategory = Object.keys(category).map(key => category[key as keyof typeof category]);
 const vstyle = ["solid", "regular", "duotone", "brands", "light", "thin"];
 
 export default function App() {
+
   const [input, setInput] = useState('')
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([] as any[])
@@ -16,6 +23,7 @@ export default function App() {
   const [listfilter, setListfilter] = useState([] as string[])
   const [liststyle, setListstyle] = useState([] as string[])
   const [listiconfilter, setListiconfilter] = useState([] as any[])
+
   useEffect(() => {
     query === ("") && listiconfilter.length === 0
       ? setResults(vicons.slice(0, 25))
@@ -28,9 +36,9 @@ export default function App() {
         setResults(vicons.filter((icon: any) => {
           return icon.label.toLowerCase().includes(query.toLowerCase())
         }))
-
-
   }, [query, listiconfilter, liststyle])
+
+
 
   useEffect(() => {
     const listicon = [] as any[]
@@ -134,7 +142,7 @@ export default function App() {
                       </li>
                     ))
                       :
-                      
+
                       liststyle.map((style: string) => (
                         icon.styles.includes(style) &&
                         <li key={icon.iconname + style}>
