@@ -86,7 +86,7 @@ export default function App() {
         </div>
         <div className='flex'>
 
-          {!openNav ?
+          {openNav ?
             <>
               <div className="fixed inset-0 w-full h-full bg-black opacity-40" onClick={() => {
                 setOpenNav(!openNav)
