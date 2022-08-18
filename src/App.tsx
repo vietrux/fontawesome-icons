@@ -92,8 +92,8 @@ export default function App() {
                 setOpenNav(!openNav)
               }
               }></div>
-              <div className="flex overflow-y-auto mr-4 fixed top-0 left-0 w-1/2 py-4 px-2 sm:w-1/4 justify-center bg-white shadow-2xl shadow-black">
-                <div className='flex flex-col'>
+              <div className="flex mr-4 fixed top-0 left-0 w-1/2 py-4 px-2 sm:w-1/4 justify-center bg-white shadow-2xl shadow-black">
+                <div className='flex flex-col overflow-y-auto'>
                   <div className="relative">
                     <div className="absolute inset-0 flex items-center" aria-hidden="true">
                       <div className="w-full border-t border-gray-300" />
