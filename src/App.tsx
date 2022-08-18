@@ -24,6 +24,7 @@ export default function App() {
   const [liststyle, setListstyle] = useState([] as string[])
   const [listiconfilter, setListiconfilter] = useState([] as any[])
   const [openNav, setOpenNav] = useState(false)
+  const [crrntPage, setCrrntPage] = useState(0)
 
   useEffect(() => {
     async function fetchData() {
@@ -38,7 +39,7 @@ export default function App() {
     query === ("") && listiconfilter.length === 0
       ?
       startTransition(() => {
-        setResults(vicons.slice(20, 120))
+        setResults(vicons.slice(0+crrntPage, 50+crrntPage))
       })
       :
       listiconfilter.length !== 0 ?
@@ -54,7 +55,7 @@ export default function App() {
           }))
         })
 
-  }, [query, listiconfilter, vicons])
+  }, [query, listiconfilter, vicons, crrntPage])
 
   useEffect(() => {
     const listicon = [] as any[]
@@ -86,14 +87,19 @@ export default function App() {
         </div>
         <div className='flex'>
 
-          {openNav ?
-            <>
+
+            <div className={
+              openNav ?
+              "visible"
+              :
+              "hidden"
+            }>
               <div className="fixed inset-0 w-full h-full bg-black opacity-40" onClick={() => {
                 setOpenNav(!openNav)
               }
               }></div>
               <div className="flex mr-4 fixed top-0 left-0 w-1/2 py-4 px-2 sm:w-1/4 justify-center bg-white shadow-2xl shadow-black">
-                <div className='flex flex-col overflow-y-auto'>
+                <div className='flex flex-col overflow-y-auto h-screen w-full px-4 pt-4 pb-8'>
                   <div className="relative">
                     <div className="absolute inset-0 flex items-center" aria-hidden="true">
                       <div className="w-full border-t border-gray-300" />
@@ -139,15 +145,12 @@ export default function App() {
                         }
                       }
                       } value={category.categoryname} />
-                      <label htmlFor={category.categoryname} className='text-sm ml-2'>{category.label}</label>
+                      <label htmlFor={category.categoryname} className='text-sm ml-2'>{`${category.label} (${category.icons.length})`}</label>
                     </div>
                   ))}
                 </div>
               </div>
-            </>
-            :
-            null
-          }
+            </div>
 
           <div className={'w-full'}>
             <div className='w-full'>
@@ -163,6 +166,52 @@ export default function App() {
                   })
                 }} />
             </div>
+            { listiconfilter.length === 0 && !input &&
+            <div className='flex justify-around my-2 items-center'>
+                <button
+                  className='flex items-center px-2 sm:px-8 sm:py-4  text-white bg-gray-800 rounded-lg shadow-lg'
+                onClick={
+                  () => {
+                    if(crrntPage - 500 >= 1)  {
+                      setCrrntPage(crrntPage - 500)
+                    }
+                  }
+                }
+                >{`<<`}Prev</button>
+                <button
+                  className='flex items-center px-2 sm:px-8 sm:py-4  text-white bg-gray-800 rounded-lg shadow-lg'
+                onClick={
+                  () => {
+                    if(crrntPage - 50 >= 0)  {
+                      setCrrntPage(crrntPage - 50)
+                    }
+                  }
+                }
+                >Prev</button>
+                <h1 className='text-lg font-bold'>{crrntPage / 50 + 1} / {Math.round(vicons.length/50)}</h1>
+                
+                <button
+                  className='flex items-center px-2 sm:px-8 sm:py-4  text-white bg-gray-800 rounded-lg shadow-lg'
+                onClick={
+                  () => {
+                    if(vicons.length > 50+crrntPage) {
+                      setCrrntPage(crrntPage + 50)
+                    }
+                  }
+                }
+                >Next</button>
+                <button
+                  className='flex items-center px-2 sm:px-8 sm:py-4  text-white bg-gray-800 rounded-lg shadow-lg'
+                onClick={
+                  () => {
+                    if(vicons.length > 500+crrntPage) {
+                      setCrrntPage(crrntPage + 500)
+                    }
+                  }
+                }
+                >Next{`>>`}</button>
+            </div>
+            }
             {isPending ? <>Loading...</> :
               !isPending && results.length !== 0 ?
                 <ul className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-4">
