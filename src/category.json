@@ -1,5 +1,6 @@
 ﻿{
   "accessibility": {
+    "categoryname": "accessibility",
     "icons": [
       "accessible-icon",
       "audio-description",
@@ -41,6 +42,7 @@
     "label": "Accessibility"
   },
   "alert": {
+    "categoryname": "alert",
     "icons": [
       "alarm-clock",
       "alarm-exclamation",
@@ -94,6 +96,7 @@
     "label": "Alert"
   },
   "alphabet": {
+    "categoryname": "alphabet",
     "icons": [
       "a",
       "b",
@@ -177,6 +180,7 @@
     "label": "Alphabet"
   },
   "animals": {
+    "categoryname": "animals",
     "icons": [
       "alicorn",
       "badger-honey",
@@ -242,6 +246,7 @@
     "label": "Animals"
   },
   "arrows": {
+    "categoryname": "arrows",
     "icons": [
       "angle-down",
       "angle-left",
@@ -482,6 +487,7 @@
     "label": "Arrows"
   },
   "astronomy": {
+    "categoryname": "astronomy",
     "icons": [
       "alien",
       "cat-space",
@@ -511,6 +517,7 @@
     "label": "Astronomy"
   },
   "automotive": {
+    "categoryname": "automotive",
     "icons": [
       "brake-warning",
       "bus",
@@ -587,6 +594,7 @@
     "label": "Automotive"
   },
   "buildings": {
+    "categoryname": "buildings",
     "icons": [
       "apartment",
       "archway",
@@ -695,6 +703,7 @@
     "label": "Buildings"
   },
   "business": {
+    "categoryname": "business",
     "icons": [
       "address-book",
       "address-card",
@@ -865,6 +874,7 @@
     "label": "Business"
   },
   "camping": {
+    "categoryname": "camping",
     "icons": [
       "acorn",
       "axe",
@@ -933,6 +943,7 @@
     "label": "Camping"
   },
   "charity": {
+    "categoryname": "charity",
     "icons": [
       "book-heart",
       "box-dollar",
@@ -974,6 +985,7 @@
     "label": "Charity"
   },
   "charts-diagrams": {
+    "categoryname": "charts-diagrams",
     "icons": [
       "bars-progress",
       "chart-area",
@@ -1019,6 +1031,7 @@
     "label": "Charts + Diagrams"
   },
   "childhood": {
+    "categoryname": "childhood",
     "icons": [
       "apple-whole",
       "baby",
@@ -1085,6 +1098,7 @@
     "label": "Childhood"
   },
   "clothing-fashion": {
+    "categoryname": "clothing-fashion",
     "icons": [
       "boot",
       "boot-heeled",
@@ -1120,6 +1134,7 @@
     "label": "Clothing + Fashion"
   },
   "coding": {
+    "categoryname": "coding",
     "icons": [
       "ban-bug",
       "barcode",
@@ -1205,6 +1220,7 @@
     "label": "Coding"
   },
   "communication": {
+    "categoryname": "communication",
     "icons": [
       "address-book",
       "address-card",
@@ -1335,6 +1351,7 @@
     "label": "Communication"
   },
   "connectivity": {
+    "categoryname": "connectivity",
     "icons": [
       "bluetooth",
       "circle-nodes",
@@ -1380,6 +1397,7 @@
     "label": "Connectivity"
   },
   "construction": {
+    "categoryname": "construction",
     "icons": [
       "angle",
       "angle-90",
@@ -1436,6 +1454,7 @@
     "label": "Construction"
   },
   "design": {
+    "categoryname": "design",
     "icons": [
       "angle",
       "angle-90",
@@ -1549,6 +1568,7 @@
     "label": "Design"
   },
   "devices-hardware": {
+    "categoryname": "devices-hardware",
     "icons": [
       "album",
       "album-circle-plus",
@@ -1644,6 +1664,7 @@
     "label": "Devices + Hardware"
   },
   "disaster": {
+    "categoryname": "disaster",
     "icons": [
       "biohazard",
       "bugs",
@@ -1689,6 +1710,7 @@
     "label": "Disaster + Crisis"
   },
   "editing": {
+    "categoryname": "editing",
     "icons": [
       "arrows-rotate",
       "bandage",
@@ -1826,6 +1848,7 @@
     "label": "Editing"
   },
   "education": {
+    "categoryname": "education",
     "icons": [
       "apple-whole",
       "atom",
@@ -1872,6 +1895,7 @@
     "label": "Education"
   },
   "emoji": {
+    "categoryname": "emoji",
     "icons": [
       "face-angry",
       "face-angry-horns",
@@ -1987,6 +2011,7 @@
     "label": "Emoji"
   },
   "energy": {
+    "categoryname": "energy",
     "icons": [
       "arrow-up-from-ground-water",
       "atom",
@@ -2063,6 +2088,7 @@
     "label": "Energy"
   },
   "files": {
+    "categoryname": "files",
     "icons": [
       "box-archive",
       "clone",
@@ -2133,6 +2159,7 @@
     "label": "Files"
   },
   "film-video": {
+    "categoryname": "film-video",
     "icons": [
       "360-degrees",
       "airplay",
@@ -2219,6 +2246,7 @@
     "label": "Film + Video"
   },
   "food-beverage": {
+    "categoryname": "food-beverage",
     "icons": [
       "apple-whole",
       "bacon",
@@ -2367,6 +2395,7 @@
     "label": "Food + Beverage"
   },
   "fruits-vegetables": {
+    "categoryname": "fruits-vegetables",
     "icons": [
       "apple-core",
       "apple-whole",
@@ -2417,6 +2446,7 @@
     "label": "Fruits + Vegetables"
   },
   "gaming": {
+    "categoryname": "gaming",
     "icons": [
       "alien-8bit",
       "axe-battle",
@@ -2535,6 +2565,7 @@
     "label": "Gaming"
   },
   "gender": {
+    "categoryname": "gender",
     "icons": [
       "genderless",
       "mars",
@@ -2554,6 +2585,7 @@
     "label": "Genders"
   },
   "halloween": {
+    "categoryname": "halloween",
     "icons": [
       "bat",
       "book-skull",
@@ -2598,6 +2630,7 @@
     "label": "Halloween"
   },
   "hands": {
+    "categoryname": "hands",
     "icons": [
       "hand",
       "hand-back-fist",
@@ -2656,6 +2689,7 @@
     "label": "Hands"
   },
   "holidays": {
+    "categoryname": "holidays",
     "icons": [
       "angel",
       "bells",
@@ -2704,6 +2738,7 @@
     "label": "Holidays"
   },
   "household": {
+    "categoryname": "household",
     "icons": [
       "air-conditioner",
       "arrow-up-from-water-pump",
@@ -2849,6 +2884,7 @@
     "label": "Household"
   },
   "humanitarian": {
+    "categoryname": "humanitarian",
     "icons": [
       "anchor",
       "anchor-circle-check",
@@ -3187,6 +3223,7 @@
     "label": "Humanitarian"
   },
   "logistics": {
+    "categoryname": "logistics",
     "icons": [
       "anchor",
       "anchor-circle-check",
@@ -3284,6 +3321,7 @@
     "label": "Logistics"
   },
   "maps": {
+    "categoryname": "maps",
     "icons": [
       "anchor",
       "bag-shopping",
@@ -3468,6 +3506,7 @@
     "label": "Maps"
   },
   "maritime": {
+    "categoryname": "maritime",
     "icons": [
       "anchor",
       "anchor-circle-check",
@@ -3500,6 +3539,7 @@
     "label": "Maritime"
   },
   "marketing": {
+    "categoryname": "marketing",
     "icons": [
       "arrows-spin",
       "arrows-to-dot",
@@ -3555,6 +3595,7 @@
     "label": "Marketing"
   },
   "mathematics": {
+    "categoryname": "mathematics",
     "icons": [
       "abacus",
       "calculator",
@@ -3616,6 +3657,7 @@
     "label": "Mathematics"
   },
   "media-playback": {
+    "categoryname": "media-playback",
     "icons": [
       "arrow-rotate-left",
       "arrow-rotate-right",
@@ -3669,6 +3711,7 @@
     "label": "Media Playback"
   },
   "medical-health": {
+    "categoryname": "medical-health",
     "icons": [
       "accessible-icon",
       "bacteria",
@@ -3825,6 +3868,7 @@
     "label": "Medical + Health"
   },
   "money": {
+    "categoryname": "money",
     "icons": [
       "austral-sign",
       "badge-dollar",
@@ -3930,6 +3974,7 @@
     "label": "Money"
   },
   "moving": {
+    "categoryname": "moving",
     "icons": [
       "blanket",
       "box-archive",
@@ -3972,6 +4017,7 @@
     "label": "Moving"
   },
   "music-audio": {
+    "categoryname": "music-audio",
     "icons": [
       "airplay",
       "album",
@@ -4068,6 +4114,7 @@
     "label": "Music + Audio"
   },
   "nature": {
+    "categoryname": "nature",
     "icons": [
       "acorn",
       "bench-tree",
@@ -4122,6 +4169,7 @@
     "label": "Nature"
   },
   "numbers": {
+    "categoryname": "numbers",
     "icons": [
       "0",
       "00",
@@ -4159,6 +4207,7 @@
     "label": "Numbers"
   },
   "photos-images": {
+    "categoryname": "photos-images",
     "icons": [
       "360-degrees",
       "aperture",
@@ -4222,6 +4271,7 @@
     "label": "Photos + Images"
   },
   "political": {
+    "categoryname": "political",
     "icons": [
       "award",
       "ballot",
@@ -4260,6 +4310,7 @@
     "label": "Political"
   },
   "punctuation-symbols": {
+    "categoryname": "punctuation-symbols",
     "icons": [
       "accent-grave",
       "alt",
@@ -4314,6 +4365,7 @@
     "label": "Punctuation + Symbols"
   },
   "religion": {
+    "categoryname": "religion",
     "icons": [
       "ankh",
       "atom",
@@ -4352,6 +4404,7 @@
     "label": "Religion"
   },
   "science": {
+    "categoryname": "science",
     "icons": [
       "atom",
       "atom-simple",
@@ -4402,6 +4455,7 @@
     "label": "Science"
   },
   "science-fiction": {
+    "categoryname": "science-fiction",
     "icons": [
       "alien",
       "alien-8bit",
@@ -4460,6 +4514,7 @@
     "label": "Science Fiction"
   },
   "security": {
+    "categoryname": "security",
     "icons": [
       "badge-sheriff",
       "ban",
@@ -4563,6 +4618,7 @@
     "label": "Security"
   },
   "shapes": {
+    "categoryname": "shapes",
     "icons": [
       "badge",
       "ball-pile",
@@ -4621,6 +4677,7 @@
     "label": "Shapes"
   },
   "shopping": {
+    "categoryname": "shopping",
     "icons": [
       "alipay",
       "amazon-pay",
@@ -4735,6 +4792,7 @@
     "label": "Shopping"
   },
   "social": {
+    "categoryname": "social",
     "icons": [
       "arrows-retweet",
       "bags-shopping",
@@ -4782,6 +4840,7 @@
     "label": "Social"
   },
   "spinners": {
+    "categoryname": "spinners",
     "icons": [
       "arrows-spin",
       "asterisk",
@@ -4822,6 +4881,7 @@
     "label": "Spinners"
   },
   "sports-fitness": {
+    "categoryname": "sports-fitness",
     "icons": [
       "award-simple",
       "badminton",
@@ -4903,6 +4963,7 @@
     "label": "Sports + Fitness"
   },
   "text-formatting": {
+    "categoryname": "text-formatting",
     "icons": [
       "align-center",
       "align-justify",
@@ -4989,6 +5050,7 @@
     "label": "Text Formatting"
   },
   "time": {
+    "categoryname": "time",
     "icons": [
       "alarm-clock",
       "alarm-exclamation",
@@ -5070,6 +5132,7 @@
     "label": "Time"
   },
   "toggle": {
+    "categoryname": "toggle",
     "icons": [
       "brightness",
       "brightness-low",
@@ -5121,6 +5184,7 @@
     "label": "Toggle"
   },
   "transportation": {
+    "categoryname": "transportation",
     "icons": [
       "accessible-icon",
       "baby-carriage",
@@ -5217,6 +5281,7 @@
     "label": "Transportation"
   },
   "travel-hotel": {
+    "categoryname": "travel-hotel",
     "icons": [
       "air-conditioner",
       "alarm-clock",
@@ -5353,6 +5418,7 @@
     "label": "Travel + Hotel"
   },
   "users-people": {
+    "categoryname": "users-people",
     "icons": [
       "accessible-icon",
       "address-book",
@@ -5558,6 +5624,7 @@
     "label": "Users + People"
   },
   "weather": {
+    "categoryname": "weather",
     "icons": [
       "bolt",
       "bolt-lightning",
@@ -5642,6 +5709,7 @@
     "label": "Weather"
   },
   "writing": {
+    "categoryname": "writing",
     "icons": [
       "blog",
       "book",
