@@ -77,7 +77,7 @@ export default function App() {
           <h1 className='text-[36px] font-bold'>Vicons</h1>
           <button onClick={() => setOpenNav(!openNav)} className='flex items-center px-4 text-white bg-gray-800 rounded-lg shadow-lg'>
             {
-              !openNav ?
+              openNav ?
                 "Close"
                 :
                 "Filter"
