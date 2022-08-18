@@ -8,7 +8,7 @@ type IconModelProps = {
 export default function IconModel(props: IconModelProps) {
 
   const [isOpen, setIsOpen] = useState(false);
-  const [signal, setSignal] = useState("");
+  const [signal, setSignal] = useState(false);
 
   return (
     <>
@@ -56,7 +56,7 @@ export default function IconModel(props: IconModelProps) {
         <div className="fixed inset-0 z-10 overflow-y-auto">
           <div className="fixed inset-0 w-full h-full bg-black opacity-40" onClick={() => {
             setIsOpen(false)
-            setSignal("")
+            setSignal(false)
           }
           }></div>
           <div className="flex items-center min-h-screen px-4 py-8">
@@ -69,15 +69,16 @@ export default function IconModel(props: IconModelProps) {
                   ))
                 }
               </div>
+              <h1 className="text-sm my-2">Click on a vicon to copy it to your clipboard</h1>
               <div className="mt-3 flex flex-wrap justify-around sm:justify-between">
                 {props.icon.styles.map((style: string, index: number) => (
                   <div
                     key={props.icon.iconname + props.icon.styles[index]}
                     onClick={() => {
                       navigator.clipboard.writeText(props.icon.svg[props.icon.styles[index] as keyof typeof props.icon.styles].raw);
-                      setSignal("");
+                      setSignal(false);
                       setTimeout(() => {
-                        setSignal("Copied");
+                        setSignal(true);
                       }, 100);
                     }}
                     className="w-[6rem] h-[6rem] m-[4px] flex flex-col items-center justify-center border border-slate-200 rounded-[30%] cursor-pointer">
@@ -115,12 +116,12 @@ export default function IconModel(props: IconModelProps) {
                   </div>
                 ))}
               </div>
-              {signal}
+              {signal && <div className="text-center text-sm text-slate-600">Copied!</div>}
               <div className="items-center gap-2 mt-3 sm:flex">
                 <button className="w-full mt-2 p-2.5 flex-1 text-white bg-indigo-600 rounded-md outline-none ring-offset-2 ring-indigo-600 focus:ring-2"
                   onClick={() => {
                     setIsOpen(false)
-                    setSignal("")
+                    setSignal(false)
                   }}
                 >
                   Close

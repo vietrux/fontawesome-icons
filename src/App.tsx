@@ -26,16 +26,23 @@ export default function App() {
 
   useEffect(() => {
     query === ("") && listiconfilter.length === 0
-      ? setResults(vicons.slice(0, 100))
+      ?
+      startTransition(() => {
+        setResults(vicons.slice(0, 100))
+      })
       :
       listiconfilter.length !== 0 ?
-        setResults(vicons.filter((icon: any) => {
-          return icon.label.toLowerCase().includes(query.toLowerCase()) && listiconfilter.includes(icon.iconname)
-        }))
+        startTransition(() => {
+          setResults(vicons.filter((icon: any) => {
+            return icon.label.toLowerCase().includes(query.toLowerCase()) && listiconfilter.includes(icon.iconname)
+          }))
+        })
         :
-        setResults(vicons.filter((icon: any) => {
-          return icon.label.toLowerCase().includes(query.toLowerCase())
-        }))
+        startTransition(() => {
+          setResults(vicons.filter((icon: any) => {
+            return icon.label.toLowerCase().includes(query.toLowerCase())
+          }))
+        })
   }, [query, listiconfilter, liststyle])
 
 
@@ -115,7 +122,7 @@ export default function App() {
             </div>
           </div>
           <div>
-            <div className='flex flex-col sm:flex-row justify-between items-center'>
+            <div className='w-4/5 flex flex-col sm:flex-row justify-between items-center'>
               <div>
                 <label className='block text-gray-700 text-sm font-bold mb-2'>
                   Search
@@ -123,13 +130,12 @@ export default function App() {
                 <input className="border border-gray-400 rounded-lg p-2 mb-2 "
                   type="text" value={input}
                   onChange={(e) => {
-                    setInput(e.target.value.trim())
+                    setInput(e.target.value)
                     startTransition(() => {
                       setQuery(e.target.value.trim())
                     })
                   }} />
               </div>
-              <h1>Click on a vicon to copy it to your clipboard</h1>
             </div>
             {isPending ? <>Loading...</> :
               !isPending && results.length !== 0 ?
