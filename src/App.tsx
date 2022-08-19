@@ -29,7 +29,9 @@ export default function App() {
   useEffect(() => {
     async function fetchData() {
       const result = await axios.get('/vicons.json');
-      setVicons(result.data); //vicons = result.data;
+      startTransition(() => {
+        setVicons(result.data); //vicons = result.data;
+      })
     }
     startTransition(() => {
       fetchData()
