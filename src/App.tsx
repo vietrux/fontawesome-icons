@@ -1,7 +1,10 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { useEffect, useState, useTransition } from 'react';
 import category from './category.json';
 import IconModel from './IconModel';
+import icons from './vicons.json';
+
+
 
 // var vicons: any[] = []
 // async function fetchData() {
@@ -10,12 +13,12 @@ import IconModel from './IconModel';
 // }
 // fetchData()
 
-
+const vicons = Object.keys(icons).map(key => icons[key as keyof typeof icons]);
 const vcategory = Object.keys(category).map(key => category[key as keyof typeof category]);
 const vstyle = ["solid", "regular", "duotone", "brands", "light", "thin"];
 
 export default function App() {
-  const [vicons, setVicons] = useState([] as any[]);
+  // const [vicons, setVicons] = useState([] as any[]);
   const [input, setInput] = useState('')
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([] as any[])
@@ -26,17 +29,17 @@ export default function App() {
   const [openNav, setOpenNav] = useState(false)
   const [crrntPage, setCrrntPage] = useState(0)
 
-  useEffect(() => {
-    async function fetchData() {
-      const result = await axios.get('/vicons.json');
-      startTransition(() => {
-        setVicons(result.data); //vicons = result.data;
-      })
-    }
-    startTransition(() => {
-      fetchData()
-    })
-  }, [])
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const result = await axios.get('/vicons.json');
+  //     startTransition(() => {
+  //       setVicons(result.data); //vicons = result.data;
+  //     })
+  //   }
+  //   startTransition(() => {
+  //     fetchData()
+  //   })
+  // }, [])
 
 
   useEffect(() => {
@@ -59,7 +62,7 @@ export default function App() {
           }))
         })
 
-  }, [query, listiconfilter, vicons, crrntPage])
+  }, [query, listiconfilter, crrntPage])
 
   useEffect(() => {
     const listicon = [] as any[]
@@ -73,7 +76,7 @@ export default function App() {
     }
     setListiconfilter(listicon)
   }
-    , [listfilter, liststyle, vicons])
+    , [listfilter, liststyle])
 
   return (
     <>
