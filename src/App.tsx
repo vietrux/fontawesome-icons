@@ -1,24 +1,13 @@
-// import axios from 'axios';
 import { useEffect, useState, useTransition } from 'react';
+import './all.css';
 import category from './category.json';
 import IconModel from './IconModel';
-import icons from './vicons.json';
+import vicons from './vicons.json';
 
-
-
-// var vicons: any[] = []
-// async function fetchData() {
-//   const result = await axios.get('/vicons.json');
-//   vicons = result.data;
-// }
-// fetchData()
-
-const vicons = Object.keys(icons).map(key => icons[key as keyof typeof icons]);
 const vcategory = Object.keys(category).map(key => category[key as keyof typeof category]);
 const vstyle = ["solid", "regular", "duotone", "brands", "light", "thin"];
 
 export default function App() {
-  // const [vicons, setVicons] = useState([] as any[]);
   const [input, setInput] = useState('')
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([] as any[])
@@ -28,20 +17,6 @@ export default function App() {
   const [listiconfilter, setListiconfilter] = useState([] as any[])
   const [openNav, setOpenNav] = useState(false)
   const [crrntPage, setCrrntPage] = useState(0)
-
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const result = await axios.get('/vicons.json');
-  //     startTransition(() => {
-  //       setVicons(result.data); //vicons = result.data;
-  //     })
-  //   }
-  //   startTransition(() => {
-  //     fetchData()
-  //   })
-  // }, [])
-
-
   useEffect(() => {
     query === ("") && listiconfilter.length === 0
       ?
@@ -83,6 +58,7 @@ export default function App() {
       <div className='p-8 sm:py-16 lg:p-16 '>
         <div className='flex justify-between'>
           <h1 className='text-[36px] font-bold'>Vicons</h1>
+
           <button onClick={() => setOpenNav(!openNav)} className='flex items-center px-4 text-white bg-gray-800 rounded-lg shadow-lg'>
             {
               openNav ?
@@ -105,7 +81,7 @@ export default function App() {
               setOpenNav(!openNav)
             }
             }></div>
-            <div className="flex mr-4 fixed top-0 left-0 w-1/2 py-4 px-2 sm:w-1/4 justify-center bg-white shadow-2xl shadow-black">
+            <div className="flex mr-4 fixed top-0 left-0 w-1/2 py-4 px-2 sm:w-1/4 justify-center bg-white shadow-2xl shadow-black z-50">
               <div className='flex flex-col overflow-y-auto h-screen w-full px-4 pt-4 pb-8'>
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center" aria-hidden="true">
@@ -160,6 +136,17 @@ export default function App() {
           </div>
 
           <div className={'w-full'}>
+            <pre onClick={() => {
+                navigator.clipboard.writeText(`<link rel="stylesheet" href="https://vtxicons.vercel.app/all.css" />`);
+              }}
+              className="cursor-pointer overflow-x-auto p-4 text-sm text-gray-600 bg-gray-100 rounded-lg shadow-lg my-2"
+              >
+              <code className='text-sm p-2'>
+                {`<link rel="stylesheet" href="https://vtxicons.vercel.app/all.css" />`}
+              </code>
+              
+            </pre>
+
             <div className='w-full'>
               <label className='block text-gray-700 text-sm font-bold mb-2'>
                 Search
@@ -172,6 +159,22 @@ export default function App() {
                     setQuery(e.target.value.trim())
                   })
                 }} />
+            </div>
+            <div className='py-2 flex-wrap flex'>
+              {
+                liststyle.length !== 0 ?
+                  liststyle.map((style: string) => (
+                    <span key={style} className='text-sm bg-gray-200 rounded-lg px-2 py-1 my-1 mr-2'>{style}</span>
+                  )
+                  ) : null
+              }
+              {
+                listfilter.length !== 0 ?
+                  listfilter.map((filter: string) => (
+                    <span key={filter} className='text-sm bg-gray-200 rounded-lg px-2 py-1 my-1 mr-2'>{filter}</span>
+                  )
+                  ) : null
+              }
             </div>
             {listiconfilter.length === 0 && !input &&
               <div className='flex justify-around my-2 items-center'>
