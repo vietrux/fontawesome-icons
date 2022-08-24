@@ -66,8 +66,8 @@ export default function IconModel(props: IconModelProps) {
               </pre>
               <i 
               onClick={async () => {
-                await getSVG(crrntStyle,props.icon.iconname)
-                navigator.clipboard.writeText(coppied);
+                await getSVG(crrntStyle,props.icon.iconname);
+                await navigator.clipboard.writeText(coppied);
                 setSignal(false);
                 setTimeout(() => {
                   setSignal(true);
