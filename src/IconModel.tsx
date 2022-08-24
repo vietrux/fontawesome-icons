@@ -15,7 +15,6 @@ export default function IconModel(props: IconModelProps) {
 
   useEffect(() => {
     setCrrntStyle(props.icon.styles[0]);
-    console.log(props.icon.styles[0]);
   }, [props.icon.styles]);
 
   async function getSVG(stl:string,icname:string){
