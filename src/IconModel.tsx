@@ -14,7 +14,7 @@ export default function IconModel(props: IconModelProps) {
   const [coppied, setCoppied] = useState("");
 
   useEffect(() => {
-    setCrrntStyle(props.icon.styles[0]);
+    setCrrntStyle(props.style || props.icon.styles[0]);
   }, [props.icon.styles]);
 
   async function getSVG(stl:string,icname:string){
